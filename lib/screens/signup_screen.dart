@@ -18,7 +18,6 @@ class SignupScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          /// 🔵 الخلفية الزرقا (كامل الشاشة)
           Container(
             width: double.infinity,
             height: double.infinity,
@@ -34,7 +33,6 @@ class SignupScreen extends StatelessWidget {
             ),
           ),
 
-          /// 🔵 المحتوى فوق الخلفية
           SafeArea(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: width * 0.06),
@@ -43,7 +41,6 @@ class SignupScreen extends StatelessWidget {
                 children: [
                   SizedBox(height: height * 0.02),
 
-                  /// السهم + البروجرس
                   Row(
                     children: [
                       GestureDetector(
@@ -83,7 +80,6 @@ class SignupScreen extends StatelessWidget {
 
                   SizedBox(height: height * 0.05),
 
-                  /// Registration
                   Text(
                     'Registration',
                     style: TextStyle(
@@ -107,9 +103,8 @@ class SignupScreen extends StatelessWidget {
             ),
           ),
 
-          /// ⚪ البوكس الأبيض (فوق كل شي)
           Positioned(
-            top: height * 0.28, // 🔥 يتحكم بمكانه
+            top: height * 0.28, 
             left: 0,
             right: 0,
             bottom: 0,
@@ -131,7 +126,6 @@ class SignupScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    /// رقم الهاتف
                     _buildPhoneField(
                       controller: phoneController,
                       width: width,
@@ -150,7 +144,6 @@ class SignupScreen extends StatelessWidget {
 
                     SizedBox(height: height * 0.03),
 
-                    /// الإيميل
                     _buildEmailField(
                       controller: emailController,
                       width: width,
@@ -159,7 +152,6 @@ class SignupScreen extends StatelessWidget {
 
                     const Spacer(),
 
-                    /// النص
                     RichText(
                       text: TextSpan(
                         style: TextStyle(
@@ -186,7 +178,6 @@ class SignupScreen extends StatelessWidget {
 
                     SizedBox(height: height * 0.02),
 
-                    /// زر Continue
                     SizedBox(
                       width: double.infinity,
                       height: height * 0.065,
@@ -219,7 +210,6 @@ class SignupScreen extends StatelessWidget {
     );
   }
 
-  /// 📱 phone field
   Widget _buildPhoneField({
     required TextEditingController controller,
     required double width,
@@ -258,7 +248,6 @@ class SignupScreen extends StatelessWidget {
     );
   }
 
-  /// 📧 email field
   Widget _buildEmailField({
     required TextEditingController controller,
     required double width,

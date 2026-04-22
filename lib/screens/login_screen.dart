@@ -19,7 +19,7 @@ class LoginScreen extends StatelessWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            /// الصورة الخلفية
+            
             Positioned.fill(
               child: Image.asset(
                 'assets/images/bg.png',
@@ -27,14 +27,12 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
 
-            /// الأزرق فوق الصورة
             Positioned.fill(
               child: Container(
                 color: const Color(0xff1C5FA8).withValues(alpha: 0.45),
               ),
             ),
 
-            /// زر اللغة
             Positioned(
               top: height * 0.03,
               right: width * 0.06,
@@ -58,10 +56,8 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
 
-            /// المحتوى
             Column(
               children: [
-                /// 👇 هذا اللي برفع البوكس لفوق
                 SizedBox(height: height * 0.20),
 
                 Expanded(
@@ -80,7 +76,6 @@ class LoginScreen extends StatelessWidget {
                       ),
                       child: Column(
                         children: [
-                          /// الخط الأخضر
                           Container(
                             width: width * 0.12,
                             height: 6,
@@ -99,7 +94,6 @@ class LoginScreen extends StatelessWidget {
 
                           SizedBox(height: height * 0.015),
 
-                          /// النص تحت الفيلد
                           Align(
                             alignment: Alignment.centerLeft,
                             child: Padding(
@@ -118,7 +112,6 @@ class LoginScreen extends StatelessWidget {
 
                           SizedBox(height: height * 0.035),
 
-                          /// LOGIN BUTTON
                           SizedBox(
                             width: double.infinity,
                             height: height * 0.065,
@@ -145,7 +138,6 @@ class LoginScreen extends StatelessWidget {
 
                           SizedBox(height: height * 0.02),
 
-                          /// SIGN UP BUTTON (أبيض)
                           SizedBox(
                             width: double.infinity,
                             height: height * 0.065,
